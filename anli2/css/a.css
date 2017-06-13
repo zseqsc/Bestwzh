@@ -1,0 +1,273 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+}
+ul, li { list-style:none; margin:0px; padding:0px; }
+ .black_overlay{ 
+    display: none; 
+    position: absolute; 
+    top: 0%; 
+   left: 0%; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index:1001; 
+    -moz-opacity: 0.8; 
+    opacity:.80; 
+    filter: alpha(opacity=88); 
+} 
+.white_mrc { 
+    display: none; 
+    position: absolute; 
+    top: 25%; 
+    left: 25%; 
+    width: 55%; 
+    height: 55%; 
+    padding: 20px; 
+    border: 10px solid orange; 
+    background-color: white; 
+    z-index:1002; 
+    overflow: auto; 
+} 
+/*带标题的图片滑动手风琴开始*/
+.dong1{
+	width: 1200px;
+	height: 400px;
+	margin: auto;
+	left:10%;
+	top: 10%;
+}
+.dong1 ul li{
+	width:106px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+}
+.dong1 ul li:nth-child(1){
+	width: 538px;
+}
+.dong1 ul li .imgTop img{
+	opacity:0.4;
+}
+.dong1 ul li .imgTop img.tm{
+	opacity:1;
+}
+.dong1 ul li .imgCen{
+	width:538px;
+	height:50px;
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+	font-size:20px;
+	line-height:50px;
+	position:absolute;
+	left:0px;
+	bottom:0;
+	text-indent:20px;
+	display:none;
+}
+
+/*带标题的图片滑动手风琴结束*/
+.a{
+	width: 1200px;
+	height: 500px;
+	border: 1px solid #000;
+	margin: auto;
+}
+.b{
+	float: left;
+	min-width:350px;
+	min-height:420px;
+	margin: 40px calc(10%/6);
+	/*border: 1px solid #000;*/
+}
+.b:nth-child(1) a{
+	position: absolute;
+}
+.b:nth-child(1) {
+	background: url(../img/010a.jpg);
+	background-size:cover
+}
+.b:nth-child(1){
+	border: 1px solid #000;
+}
+.d{
+	width: 100%;
+	height: 30px;
+	background: #ccc;
+	border-bottom: 1px solid #000;
+}
+.d p{
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.d .e{
+	float: right;
+	margin-top: -43px;
+	width: 60px;
+	height: 20px;
+	border: 1px solid #000;
+	text-align: center;
+}
+.d ul {
+	margin-top: 0px;
+	
+}
+.d ul li span{
+	float:right ;
+	margin-top:-35px ;
+	color: rgba(0,0,0,.3);
+	z-index: 1;
+	font-size: .5em;
+}
+.b p{
+	font-size: 1.5em;
+}
+.b .d ul li a{
+	transition: color .5s; 
+}
+.b .d ul li a:hover{
+	color:red;
+}
+.b ul li p:before{
+	content: "▫";
+}
+/*鼠标响应文字自由跳动开始*/
+#light2{
+	background: #000000;
+}
+.b ul li p#example:before{
+	content: none;
+}
+.bumpy-char {
+    line-height: 3.4em;
+    position: relative;
+    float:left;
+}
+#example{ 
+	text-align:center; 
+	font-size:60px;
+}
+.d ul li span {
+    float: left;
+    margin-top: -3px;
+    color: rgba(255,255,255,.6);
+    margin: auto;
+    z-index: 1;
+    font-size: .5em;
+}
+/*鼠标响应文字自由跳动结束*/
+/*CSS3弹跳Loading动画开始*/
+	.load-bg{
+		position: relative; 
+		width: 400px; 
+		height: 300px; 
+		line-height: 300px; 
+		text-align: center; 
+		background-color: #3a3a42;
+		margin:50px 0 50px 220px
+}
+	.load-bg i{
+		display: inline-block;
+	 	width: 18px; 
+	 	height: 18px; 
+	 	border-radius: 50%;
+	 	border: 2px solid #94949c;
+	 	margin: 0 12px;
+	 	-webkit-animation: load 1.2s linear infinite;
+}
+	.load-bg i:nth-child(1) {
+		-webkit-animation-delay: .2s; 
+	}
+	.load-bg i:nth-child(2) {
+		-webkit-animation-delay: .4s; 
+	}
+	.load-bg i:nth-child(3) {
+		-webkit-animation-delay: .6s; 
+	}
+	.load-bg i:nth-child(4) {
+		-webkit-animation-delay: .8s; 
+	}
+	.load-bg i:nth-child(5) {
+		-webkit-animation-delay: 1s; 
+	}
+	@-webkit-keyframes load
+	{
+	  from {
+	    background:none;
+	    border: 2px solid #94949c;
+	  }
+	  to {
+	    background:-webkit-linear-gradient(top,#626464,#eee); 
+	    border: 1px solid #626464;
+	  }
+	}
+	.jump{
+	  position: absolute;
+	  display: inline-block;
+	  top: 30%;
+	  width: 18px;
+	  height: 22px;
+	  border-radius: 50%;
+	  background:-webkit-gradient(linear, 0 0, 0 100%, from(#626464), to(#eee));
+	  background:-webkit-linear-gradient(#626464, #eee);
+	  background:-moz-linear-gradient(#626464, #eee);
+	  background:-o-linear-gradient(#626464, #eee);
+	  background:linear-gradient(#626464, #eee); 
+	  -webkit-animation:jump 2s ease-in-out 0.5s infinite;
+	}
+	.jump:before{
+		content: "";
+		position: absolute;
+		width: 30px;
+		height: 2px;
+		color: red;
+	}
+	@-webkit-keyframes jump{
+	  0%{
+	    height: 18px;
+	    -webkit-transform:translate(15px,30px);
+	  }
+	  12%{
+	    height: 18px;
+	    -webkit-transform:translate(28px,-30px);
+	  }
+	  24%{
+	    height: 18px;
+	    -webkit-transform:translate(53px,30px);
+	  }
+	  36%{
+	    height: 18px;
+	    -webkit-transform:translate(78px,-30px);
+	  }
+	  48%{
+	    height: 18px;
+	    -webkit-transform:translate(103px,30px);
+	  }
+	  60%{
+	    height: 18px;
+	    -webkit-transform:translate(125px,-30px);
+	  }
+	  72%{
+	    height: 18px;
+	    -webkit-transform:translate(150px,30px);
+	  }
+	  84%{
+	    height: 18px;
+	    -webkit-transform:translate(170px,-30px);
+	  }
+	  100%{
+	    height: 18px;
+	    -webkit-transform:translate(200px,30px);
+	  }
+	}
+/*CSS3弹跳Loading动画结束*/
